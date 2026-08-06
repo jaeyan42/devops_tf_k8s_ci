@@ -121,7 +121,7 @@
         `Au... github` 버튼 클릭 > 설정완료
 
       # ID 조회
-      gh api repos/ucoccto/devops_tf_k8s_ci --jq "{owner_id: .owner.id, repository_id: .id, created_at: .created_at}"
+      gh api repos/jaeyan42/devops_tf_k8s_ci --jq "{owner_id: .owner.id, repository_id: .id, created_at: .created_at}"
       ---
       {
         "created_at": "2026-08-05T23:51:38Z",
@@ -136,3 +136,29 @@
 ./project.sh deploy
 ./project.bat deploy
 ```
+
+- ci 셋업 1회 진행
+```
+./setup-ci.bat jaeyan42/devops_tf_k8s_ci 
+./setup-ci.sh jaeyan42/devops_tf_k8s_ci
+```
+
+- 조정
+  - ci.yml
+    - 5, 12 라인 : 브런치 대상 `main` 수정
+
+- ci 테스트
+  - ~/app/web/index.html
+    ```
+      v 3 => v3
+    ```
+
+- git 반영
+  - github actions 작동되는 영역 제한 : ci.yml 기록
+    ```
+      - "apps/**"
+      - "infra/**"
+      - "scripts/ci/**"
+      - ".github/workflows/ci.yml"
+    ```
+  - add -> commit -> push
