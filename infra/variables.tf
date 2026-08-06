@@ -7,7 +7,7 @@ variable "aws_region" {
 variable "project_name" {
   description = "리소스 이름에 사용할 프로젝트명"
   type        = string
-  default     = "de-ai-25-eks-auto"
+  default     = "de-ai-05-eks-auto"
 }
 
 variable "environment" {
@@ -25,7 +25,7 @@ variable "vpc_cidr" {
 variable "availability_zones" {
   description = "Multi-AZ 구성에 사용할 가용 영역 2개"
   type        = list(string)
-  default     = ["ap-northeast-2a", "ap-northeast-2c"]
+  default     = ["us-east-2a", "us-east-2c"]
 
   validation {
     condition     = length(var.availability_zones) == 2
