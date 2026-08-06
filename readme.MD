@@ -122,4 +122,10 @@
 
       # ID 조회
       gh api repos/ucoccto/devops_tf_k8s_ci --jq "{owner_id: .owner.id, repository_id: .id, created_at: .created_at}"
+      ---
+      {
+        "created_at": "2026-08-05T23:51:38Z",
+        "owner_id": 173376075,
+        "repository_id": 1324570033
+      }
     ```
