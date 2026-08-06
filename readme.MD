@@ -32,13 +32,13 @@
 
 # 프로젝트 구조
 ```text
-        tf-k8s-ci/
+        devops-tf-k8s-ci/
         ├─ setup-ci.bat             # 신규 1회 수행 : Windows CI 전체 최초 설정
         ├─ setup-ci.sh              # 신규 1회 수행 : macOS/Linux/WSL CI 전체 최초 설정
         ├─ validate-ci.bat          # 신규 수시 수행 : Windows 로컬 CI 재검증 
         ├─ validate-ci.sh           # 신규 수시 수행 : macOS/Linux/WSL 로컬 CI 재검증
-        ├─ project.bat              # 신규 인프라/쿠버네티스 구성시/변경되면 수행 : Windows 전체 명령 진입점
-        ├─ project.sh               # 신규 인프라/쿠버네티스 구성시/변경되면 수행 : macOS/Linux/WSL 전체 명령 진입점
+        ├─ project.bat              # 신규 인프라 구성시/변경되면 수행 : Windows 전체 명령 진입점
+        ├─ project.sh               # 신규 인프라 구성시/변경되면 수행 : macOS/Linux/WSL 전체 명령 진입점
         ├─ .github/                 # 신규
         │  ├─ workflows/ci.yml      # 신규 GitHub Actions CI Workflow
         │  └─ dependabot.yml        # 신규 GitHub Actions 버전 점검
@@ -61,3 +61,13 @@
         ├─ tools/
         └─ docs/
     ```
+
+- 전체 저장소 배치
+  ```
+    devops_tf_k8s/
+    L devops_tf_k8s_ci
+    L devops_tf_k8s_cd
+  ```
+
+
+  
